@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap3'
+    'bootstrap3',
+    'gram.apps.GramConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
