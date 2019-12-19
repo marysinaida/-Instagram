@@ -1,10 +1,16 @@
 {%extends "registration/base.html"%}
 {% load bootstrap3 %}
 {% block content%}
-    <div class="signup-form">
-        <form action="/examples/actions/confirmation.php" method="post">
-            <h2>Sign Up</h2>
-            <p>Please fill in this form to create an account!</p>
+<div class="container" id="form">
+    <div class="col-md-6 image">
+        <img src="https://images.indianexpress.com/2016/07/instagram-7591.jpg" alt="">
+
+    </div>
+    <div class="col-md-6 signup-form">
+        <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+            <h2>Instagram</h2>
+            <p>Sign up to see photos and videos from your friends.</p>
             <hr>
             <div class="form-group">
                 <div class="input-group">
@@ -21,7 +27,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
                 </div>
             </div>
             <div class="form-group">
@@ -30,7 +36,7 @@
                         <i class="fa fa-lock"></i>
                         <i class="fa fa-check"></i>
                     </span>
-                    <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
                 </div>
             </div>
             <div class="form-group">
@@ -40,7 +46,10 @@
                 <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
             </div>
         </form>
-        <button class="btn btn-primary btn-lg">Already have an account? <a href="/gram/templates/registration/login.html">Login here</a></button>
+        <button class="btn btn-primary btn-lg">Already have an account? <a href="{% url 'login' %}">Login here</a></button>
     </div>
+</div>
+<a class="store" href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBZKThrkEEG5TEkT-3mi20Oe2VyBv1KHdoZIhxgcPbi0KEPIXI&s" ></a>
+<a class="googleplay" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D953E432D-2697-4782-9699-365D776128A3%26utm_content%3Dlo%26utm_medium%3Dbadge" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz5xY1VFQxw5QluaMCT6EsdnRJW6yJPv8IjP3S_rs3R97RVYS_Wg&s" alt=""></a>
     
 ​{% endblock%}
