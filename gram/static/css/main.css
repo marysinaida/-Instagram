@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
 .body {
     color: #fff;
     background: #19aa8d;
     font-family: 'Roboto', sans-serif;
+}
+.signup-form h2{
+    font-family: 'Satisfy', cursive;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50px;
 }
 .form-control, .form-control:focus, .input-group-addon {
     border-color: #e1e1e1;
@@ -111,6 +118,7 @@
 #form{
     display: flex;
     margin-top: 5%;
+    align-content: center;
 }
 .image{
 margin-left: 5%;
