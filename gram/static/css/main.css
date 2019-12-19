@@ -85,6 +85,7 @@
     top: 18px;
     font-size: 7px;
     position: absolute;
+    margin-right: 10vh;
 }
 .login-form {
     width: 340px;
@@ -106,4 +107,25 @@
 .btn {        
     font-size: 15px;
     font-weight: bold;
+}
+#form{
+    display: flex;
+    margin-top: 5%;
+}
+.image{
+margin-left: 5%;
+}
+.store img {
+    width: 150px;
+    height: 50px;
+    margin-left: 60%;
+
+    
+}
+.googleplay img{
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin-right: 20%;
+
 }
