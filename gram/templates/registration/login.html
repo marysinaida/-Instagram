@@ -2,7 +2,8 @@
 {% load bootstrap3 %}
 {% block content %}
 <div class="login-form">
-  <form action="/examples/actions/confirmation.php" method="post">
+  <form action="{% url 'home'%}" method="post">
+        {% csrf_token %}
       <h2 class="text-center">Log in</h2>       
       <div class="form-group">
           <input type="text" class="form-control" placeholder="Username" required="required">
@@ -15,7 +16,7 @@
       </div>        
   </form>
   <div class="form-group">
-    <button type="submit" href="#" class="btn btn-primary btn-block">Sign Up Here</button>
+    <button type="submit" href="{% url 'signUp'%}" class="btn btn-primary btn-block">Sign Up Here</button>
 </div>
 </div>
 {% endblock%}
