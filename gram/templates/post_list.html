@@ -1,0 +1,8 @@
+  {% extends 'registration/base.html'%}
+  {% block content %}
+  {% for post in posts %}
+       <p>{{post.author}}</p>
+       <p>{{post.caption}}</p>
+
+    {% endfor %}
+{% endblock  %}

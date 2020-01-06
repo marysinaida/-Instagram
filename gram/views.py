@@ -14,7 +14,7 @@ def login(request):
 
 def home(request):
 
-    return render(request,'index.html')
+    return render(request,'post_list.html')
 @login_required(login_url='/profile')
 def search_results(request):
     if 'username' in request.GET and request.GET["username"]:
