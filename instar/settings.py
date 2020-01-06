@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'bootstrap3',
+    'crispy_forms',
     'gram.apps.GramConfig',
     'django.contrib.admin',
     'django.contrib.auth',
