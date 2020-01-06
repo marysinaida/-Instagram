@@ -1,20 +1,25 @@
 from django.shortcuts import render
+from .models import Post
+from django.views.generic import (ListView)
 from django.http  import HttpResponse
 from django.contrib.auth.decorators import login_required
 
 
 
 # Create your views here.
+class PostListView(ListView):
+    template_name = "post_list.html"
+    queryset = Post.objects.all()
+    context_object_name = "posts"
+     
 
 def signUp(request):
-    return render(request,'registration/registration_form.html')
+    return render(request,'.html')
 
 def login(request):
     return render(request,'registration/login.html')
 
-def home(request):
 
-    return render(request,'post_list.html')
 @login_required(login_url='/profile')
 def search_results(request):
     if 'username' in request.GET and request.GET["username"]:

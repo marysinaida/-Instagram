@@ -29,7 +29,8 @@ header{
     width: 30;
 }
 .instalogo a{
-    font-size: 25px;
+    font-size: 30px;
+    font-family: 'Satisfy', cursive;
     padding-left:10px; 
 }
 .vl{
@@ -64,6 +65,89 @@ header{
     font-size: 15px;
     padding-left: 10px;
 }
+
+.content_container{
+    background-color: #FAFAFA;
+    padding-top: 50px;
+    position: absolute;
+    width: 100%;
+    top: 83px;
+    left: 0;
+}
+.card{
+    background-color: #fff;
+    margin: 0 auto;
+    width: 614px;
+    height: auto;
+    border: 0.9px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 58px;
+}
+.card_hearder{
+    padding:10px;
+}
+.card_hearder a{
+    text-decoration: none;
+    color: black;
+}
+.profile_image{
+    display: inline-block;
+    background-color: yellow;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    border: 0 solid #000000;
+    border-radius: 50%;
+}
+.post_info{
+    display: inline-block;
+    padding-left: 15px;
+}
+.post_name{
+  font-size: 14px;
+  color: #111; 
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+.post_location{
+    font-size: 12px;
+    color: grey;
+    padding: 0;
+    margin: 0;
+}
+.post_options{
+    font-size: 15px;
+    float: right;
+    display: inline-block;
+    margin: 4px;
+    padding: 5px;
+    color: #cccccc;
+}
+.post_image{
+ width: 100%;
+ height: 614px;   
+}
+.engagement{
+    display: inline-block;
+    width: 100%;
+    margin: 4px 0px 0px;
+    padding: 0px 16px;
+}
+.engagement a{
+    padding: 7px;
+    font-size: 25px;
+    color: slategrey;
+    font-weight: 600;
+
+}
+.fa-bookmark{
+    float: right;
+    margin-right: 15px;
+}
+
+
 .signup-form h2{
     font-family: 'Satisfy', cursive;
     font-weight: bolder;
@@ -189,58 +273,4 @@ margin-left: 5%;
     margin-left: 60%;
 
     
-}.card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    min-height: 300px;
-  }
-  
-  .img {
-    border-radius: 50%;
-  }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .details-container {
-    flex: 2;
-  }
-  
-  .avatar-container {
-    flex-basis: 250px;
-  }
-  
-
-
-.footer-action-icons{
-  font-size: 16px;
-  color: #ccc;
-}
-
-.comments-input{
-  border: none;
-  margin-left: 10px;
-  width: 100%;
-}
-
-.googleplay img{
-    width: 150px;
-    height: 50px;
-    float: right;
-    margin-right: 20%;
-}
-.navbar{
-    background-color: whitesmoke;
-}
-.collapse-content .fa.fa-heart:hover {
-    color: #f44336 !important;
-  }
-  .collapse-content .fa.fa-share-alt:hover {
-    color: #0d47a1 !important;
-  }
-.card promoting-card{
-    align-content: center;
 }
