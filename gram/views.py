@@ -1,7 +1,8 @@
 from django.shortcuts import render,get_object_or_404
 from django.utils import timezone
 from .forms import PostForm
-from .models import Post
+from .models import Post,Profile
+from django.contrib.auth.models import User
 from django.views.generic import (ListView,CreateView,DetailView)
 from django.http  import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -28,13 +29,14 @@ class PostCreateView(CreateView):
 class PostDetailView(DetailView):
     template_name ="post_details.html"
     queryset = Post.objects.all().filter(created_date__lte=timezone.now()) 
+     
     def get_object(self):
         id_ = self.kwargs.get('id')
-        return get_object_or_404(post,id=id_)
+        return get_object_or_404(Post,id=id_)
       
 
 def signUp(request):
-    return render(request,'.html')
+    return render(request,'registration_form.html')
 
 def login(request):
     return render(request,'registration/login.html')
@@ -50,10 +52,10 @@ def search_results(request):
         return render(request, 'registration/search.html', {'message':message, 'results':searched_users, 'profile_pic':profile_pic})
     else:
         message = "You haven't searched for any term"
-        return render(request, 'registration/search.html', {'message':message})
+        return render(request, 'search.html', {'message':message})
             
 def profile(request):
-    images = request.user.profile.posts.all()
+    image = request.user.profile.posts.all()
     if request.method == 'POST':
         user_form = UpdateUserForm(request.POST, instance=request.user)
         prof_form = UpdateUserProfileForm(request.POST, request.FILES, instance=request.user.profile)
@@ -70,5 +72,5 @@ def profile(request):
         'images': images,
 
     }
-    return render(request, 'registration/profile.html', params)
+    return render(request, 'profile.html', params)
 
